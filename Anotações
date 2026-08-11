@@ -1,0 +1,49 @@
+programa {
+  funcao inicio() {
+    escreva ("Boletim de Lançamento de Notas\n")
+    cadeia nome
+    cadeia curso
+    cadeia disciplina
+    inteiro nota1, nota2, media
+
+    escreva ("Informe o Nome do Aluno(a):\t")
+    leia (nome)
+
+    escreva ("Informe o Curso do Aluno(a):\t")
+    leia (curso)
+
+    escreva ("Fale o semestre que estuda:\t")
+    leia (curso)
+
+    escreva ("Escreva a Disciplina:\t")
+    leia (disciplina)
+
+    escreva ("Digite sua nota no exame:\t")
+    leia (nota1)
+
+    escreva ("Informe sua nota de trabalho:\t")
+    leia (nota2)
+
+    se(nota1<=100 e nota2<=100 e nota1>=0 e nota2>=0) {
+
+      media = (nota1 + nota2) / 2
+
+      escreva ("----------BOLETIM UNICESUMAR----------\nNome do(a) estudante:\t", nome,
+      "\nCurso inscrito:\t", curso,
+      "\nDisciplina:\t", disciplina,
+      "\nNota do Exame:\t", nota1,
+      "\nNota do Trabalho:\t", nota2,
+        "\nMédia do bimestre:\t", media, "\n")
+
+      se (media<=19 e media>=0) {
+        escreva ("Conclusão: Reprovado")
+      } senao se (media<=59 e media>=20) {
+        escreva ("Conclusão: De Recuperação")
+      } senao se (media<=100 e media>=60) {
+        escreva ("Conclusão: Aprovado")
+      }
+    } senao {
+      escreva ("Valor inválido em um dos campos.\nTente novamente.")
+    }
+  }
+}
