@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	// EXercício 2
+	double valor = 0.0;
+	int n = 0;
+	
+	printf ("\nDigite o valor: ");
+	scanf ("%lf", &valor);
+	
+	if (valor >=10) {
+		for (valor = valor; valor >= 10; valor) {
+			valor = valor / 10;
+			n = n + 1;
+			printf ("  %lf x 10 elevado a %d potencia  \n", valor, n);
+		}
+	} else {
+		for (valor = valor; valor < 1; valor) {
+			valor = valor * 10;
+			n = n + 1;
+			printf ("  %lf x 10 elevado a -%d potencia  \n", valor, n);
+		}
+	}
+		
+	return 0;
+}
